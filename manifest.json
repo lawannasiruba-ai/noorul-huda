@@ -1,0 +1,9 @@
+{
+  "name": "Noorul Huda",
+  "short_name": "Noorul Huda",
+  "start_url": "../index.html",
+  "display": "standalone",
+  "background_color": "#f5f8f4",
+  "theme_color": "#063b2b",
+  "orientation": "portrait"
+}
