@@ -1,0 +1,881 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f8f4;
+    color: #173b2c;
+}
+
+header {
+    background: #063b2b;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #d8bd55;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #d8bd55;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+}
+
+.hero {
+    min-height: 570px;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #083f2e;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #d8bd55;
+}
+
+.hero p:not(.arabic) {
+    font-size: 18px;
+}
+
+.arabic {
+    direction: rtl;
+    font-size: 35px;
+    color: #d8bd55;
+    margin: 15px 0;
+}
+
+.btn {
+    display: inline-block;
+    margin: 30px 5px 0;
+    padding: 13px 25px;
+    border-radius: 30px;
+    background: #d8bd55;
+    color: #063b2b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn.second {
+    background: transparent;
+    color: white;
+    border: 2px solid #d8bd55;
+}
+
+.verse {
+    text-align: center;
+    background: white;
+    padding: 45px 20px;
+    box-shadow: 0 3px 15px #00000012;
+}
+
+.verse h3 {
+    color: #9a8120;
+    letter-spacing: 2px;
+}
+
+.verse .arabic {
+    color: #063b2b;
+}
+
+.resources {
+    padding: 70px 7%;
+    text-align: center;
+}
+
+.resources h2,
+.dua h2,
+.about h2 {
+    font-size: 34px;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #00000012;
+}
+
+.icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.card button {
+    border: none;
+    background: #063b2b;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 25px;
+}
+
+.dua {
+    padding: 70px 7%;
+    text-align: center;
+    background: #e8f0e8;
+}
+
+.dua-box {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.dua-box .arabic {
+    color: #063b2b;
+}
+
+.about {
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.about p {
+    max-width: 700px;
+    margin: auto;
+    color: #555;
+}
+
+footer {
+    background: #04271d;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+footer h2 {
+    color: #d8bd55;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 850px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #063b2b;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .arabic {
+        font-size: 27px;
+    }
+}
+.calendar {
+    padding: 70px 7%;
+    text-align: center;
+    background: white;
+}
+
+.calendar h2 {
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+
+.calendar-box {
+    max-width: 600px;
+    margin: auto;
+    padding: 35px;
+    background: #f5f8f4;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px #00000012;
+}
+
+.calendar-box h3 {
+    color: #063b2b;
+    font-size: 28px;
+    margin: 15px 0;
+}
+.quran-page {
+    padding: 70px 7%;
+    background: #f5f8f4;
+    text-align: center;
+}
+
+.quran-search {
+    max-width: 600px;
+    margin: 0 auto 35px;
+}
+
+.quran-search input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #d8bd55;
+    border-radius: 30px;
+    outline: none;
+    font-size: 16px;
+}
+
+.surah-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    text-align: left;
+}
+
+.surah-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #00000012;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.surah-card:hover {
+    transform: translateY(-5px);
+}
+
+.surah-number {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    background: #063b2b;
+    color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.surah-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.surah-arabic {
+    float: right;
+    direction: rtl;
+    font-size: 22px;
+    color: #063b2b;
+}
+
+@media (max-width: 700px) {
+    .surah-list {
+        grid-template-columns: 1fr;
+    }
+}
+.loading {
+    text-align: center;
+    padding: 30px;
+    font-size: 18px;
+}
+
+.error {
+    text-align: center;
+    padding: 30px;
+    color: #b00020;
+}
+
+.surah-name {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.surah-name small {
+    display: block;
+    color: #777;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.reader {
+    max-width: 900px;
+    margin: auto;
+}
+
+.back-btn {
+    border: none;
+    background: #063b2b;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.surah-header {
+    text-align: center;
+    background: white;
+    padding: 35px 20px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+.reader-arabic {
+    direction: rtl;
+    font-size: 38px;
+    color: #063b2b;
+    margin-bottom: 10px;
+}
+
+.ayah-container {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.ayah {
+    padding: 30px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.ayah:last-child {
+    border-bottom: none;
+}
+
+.ayah-number {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #063b2b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.ayah-arabic {
+    direction: rtl;
+    text-align: right;
+    font-size: 30px;
+    line-height: 2;
+    color: #063b2b;
+    margin-bottom: 20px;
+}
+
+.ayah-translation {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+}
+
+@media (max-width: 650px) {
+
+    .reader-arabic {
+        font-size: 30px;
+    }
+
+    .ayah-arabic {
+        font-size: 25px;
+        line-height: 2;
+    }
+
+    .ayah-translation {
+        font-size: 15px;
+    }
+}
+.loading {
+    text-align: center;
+    padding: 30px;
+    font-size: 18px;
+}
+
+.error {
+    text-align: center;
+    padding: 30px;
+    color: #b00020;
+}
+
+.surah-name {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.surah-name small {
+    display: block;
+    color: #777;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.reader {
+    max-width: 900px;
+    margin: auto;
+}
+
+.back-btn {
+    border: none;
+    background: #063b2b;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.surah-header {
+    text-align: center;
+    background: white;
+    padding: 35px 20px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+.reader-arabic {
+    direction: rtl;
+    font-size: 38px;
+    color: #063b2b;
+    margin-bottom: 10px;
+}
+
+.ayah-container {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.ayah {
+    padding: 30px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.ayah:last-child {
+    border-bottom: none;
+}
+
+.ayah-number {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #063b2b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.ayah-arabic {
+    direction: rtl;
+    text-align: right;
+    font-size: 30px;
+    line-height: 2;
+    color: #063b2b;
+    margin-bottom: 20px;
+}
+
+.ayah-translation {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+}
+
+@media (max-width: 650px) {
+
+    .reader-arabic {
+        font-size: 30px;
+    }
+
+    .ayah-arabic {
+        font-size: 25px;
+        line-height: 2;
+    }
+
+    .ayah-translation {
+        font-size: 15px;
+    }
+}
+.hadith-page {
+    padding: 70px 7%;
+    background: #f5f8f4;
+}
+
+.hadith-search {
+    max-width: 600px;
+    margin: 0 auto 35px;
+}
+
+.hadith-search input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #d8bd55;
+    border-radius: 30px;
+    outline: none;
+    font-size: 16px;
+}
+
+.hadith-list {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    gap: 20px;
+}
+
+.hadith-card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px #00000012;
+}
+
+.hadith-card h3 {
+    color: #063b2b;
+    margin-bottom: 12px;
+}
+
+.hadith-card p {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.hadith-card small {
+    color: #927c22;
+    font-weight: bold;
+}
+.dua-page {
+    padding: 70px 7%;
+    background: #e8f0e8;
+    text-align: center;
+}
+
+.dua-categories {
+    max-width: 900px;
+    margin: 0 auto 35px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.dua-categories button {
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background: #063b2b;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dua-categories button:hover {
+    background: #176044;
+}
+
+.dua-display {
+    max-width: 750px;
+    margin: auto;
+    background: white;
+    padding: 40px 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px #00000012;
+}
+
+.dua-display .arabic {
+    font-size: 35px;
+    color: #063b2b;
+    margin-bottom: 20px;
+}
+
+.dua-display p:not(.arabic) {
+    font-size: 17px;
+    color: #555;
+}
+
+.dua-display small {
+    display: block;
+    margin-top: 15px;
+    color: #927c22;
+}
+
+@media (max-width: 650px) {
+
+    .dua-categories {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .dua-display .arabic {
+        font-size: 27px;
+    }
+
+}
+.dua-categories {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.dua-categories button {
+    padding: 16px 10px;
+    border: none;
+    border-radius: 12px;
+    background: #063b2b;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.dua-categories button:hover {
+    background: #176044;
+}
+.dua-categories {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.dua-categories button {
+    padding: 16px 10px;
+    border: none;
+    border-radius: 12px;
+    background: #063b2b;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+/* =========================
+   DUA BUTTONS
+========================= */
+
+.dua-page input {
+    display: none;
+}
+
+.dua-categories {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.dua-categories label {
+    display: block;
+    padding: 16px 10px;
+    background: #063b2b;
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dua-categories label:hover {
+    background: #176044;
+}
+
+.dua-display {
+    max-width: 750px;
+    margin: auto;
+    background: white;
+    padding: 40px 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px #00000012;
+}
+
+.dua-item {
+    display: none;
+    text-align: center;
+}
+
+.dua-item .arabic {
+    font-size: 35px;
+    color: #063b2b;
+    margin-bottom: 20px;
+}
+
+.dua-item p:not(.arabic) {
+    font-size: 17px;
+    color: #555;
+}
+
+.dua-item small {
+    display: block;
+    margin-top: 15px;
+    color: #927c22;
+}
+
+/* SHOW SELECTED DUA */
+
+#morning:checked ~ .dua-display .morning-dua {
+    display: block;
+}
+
+#evening:checked ~ .dua-display .evening-dua {
+    display: block;
+}
+
+#sleep:checked ~ .dua-display .sleep-dua {
+    display: block;
+}
+
+#travel:checked ~ .dua-display .travel-dua {
+    display: block;
+}
+
+#knowledge:checked ~ .dua-display .knowledge-dua {
+    display: block;
+}
+
+#forgiveness:checked ~ .dua-display .forgiveness-dua {
+    display: block;
+}
+
+@media (max-width: 650px) {
+
+    .dua-categories {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .dua-categories label {
+        font-size: 13px;
+        padding: 14px 5px;
+    }
+
+    .dua-item .arabic {
+        font-size: 27px;
+    }
+}
+/* =========================
+   ISLAMIC ARTICLES
+========================= */
+
+.articles {
+    padding: 70px 7%;
+    background: white;
+    text-align: center;
+}
+
+.article-list {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.article-card {
+    background: #f5f8f4;
+    padding: 30px 20px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px #00000012;
+}
+
+.article-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.article-card h3 {
+    color: #063b2b;
+    margin-bottom: 12px;
+}
+
+.article-card p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.article-card button {
+    border: none;
+    padding: 12px 22px;
+    border-radius: 25px;
+    background: #063b2b;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.article-card button:hover {
+    background: #176044;
+}
+
+@media (max-width: 700px) {
+    .article-list {
+        grid-template-columns: 1fr;
+    }
+}
