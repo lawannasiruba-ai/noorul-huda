@@ -1,6 +1,7 @@
 {
   "name": "Noorul Huda",
   "short_name": "Noorul Huda",
+  "description": "An Islamic website for Qur'an, Hadith, Addu'a and Islamic knowledge.",
   "start_url": "../index.html",
   "display": "standalone",
   "background_color": "#f5f8f4",
