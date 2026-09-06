@@ -3,11 +3,791 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/index.css">
-  <script src="js/index.js"></script>
-  <title>App</title>
+  <meta name="theme-color" content="#063b2b">
+
+  <title>Noorul Huda</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-	<h1>App</h1>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+  <div class="logo">
+    ☪ <span>Noorul Huda</span>
+  </div>
+
+</header>
+
+
+<!-- ================= HOME ================= -->
+
+<section id="home" class="hero">
+
+  <div class="hero-content">
+
+    <p class="arabic big-arabic">
+      بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+    </p>
+
+    <h1>
+      Welcome to <span>Noorul Huda</span>
+    </h1>
+
+    <p class="hero-text">
+      Islamic Knowledge, Guidance and Inspiration
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="#quran-page" class="btn">
+        📖 Explore Qur'an
+      </a>
+
+      <a href="#dua-page" class="btn second">
+        🤲 Daily Addu'a
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+  <nav class="bottom-nav">
+  <a href="#home">
+    <span>🏠</span>
+    <small>Home</small>
+  </a>
+
+  <a href="#quran-page">
+    <span>📖</span>
+    <small>Qur'an</small>
+  </a>
+
+  <a href="#hadith-page">
+    <span>📚</span>
+    <small>Hadith</small>
+  </a>
+
+  <a href="#dua-page">
+    <span>🤲</span>
+    <small>Dua</small>
+  </a>
+
+  <a href="#tasbih">
+    <span>📿</span>
+    <small>Tasbih</small>
+  </a>
+
+  <a href="#names">
+    <span>🌙</span>
+    <small>Names</small>
+  </a>
+
+  <a href="#articles">
+    <span>📝</span>
+    <small>Articles</small>
+  </a>
+  </nav>
+
+
+<!-- ================= VERSE ================= -->
+
+<section class="verse">
+
+  <p class="verse-title">
+    VERSE OF THE DAY
+  </p>
+
+  <p class="arabic">
+    إِنَّ مَعَ الْعُسْرِ يُسْرًا
+  </p>
+
+  <p>
+    Indeed, with hardship comes ease.
+  </p>
+
+  <small>
+    Qur'an 94:6
+  </small>
+
+</section>
+
+
+<!-- ================= RESOURCES ================= -->
+
+<section class="resources">
+
+  <div class="section-title">
+
+    <p>EXPLORE</p>
+
+    <h2>Islamic Resources</h2>
+
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+
+      <div class="icon">📖</div>
+
+      <h3>Qur'an</h3>
+
+      <p>
+        Read and learn from the Holy Qur'an.
+      </p>
+
+      <a href="#quran-page" class="card-btn">
+        Read Qur'an
+      </a>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">📚</div>
+
+      <h3>Hadith</h3>
+
+      <p>
+        Learn beneficial teachings of the Prophet ﷺ.
+      </p>
+
+      <a href="#hadith-page" class="card-btn">
+        Read Hadith
+      </a>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">🤲</div>
+
+      <h3>Daily Addu'a</h3>
+
+      <p>
+        Beautiful supplications for everyday life.
+      </p>
+
+      <a href="#dua-page" class="card-btn">
+        View Addu'a
+      </a>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">📿</div>
+
+      <h3>Tasbih</h3>
+
+      <p>
+        Count your daily dhikr easily.
+      </p>
+
+      <a href="#tasbih" class="card-btn">
+        Open Tasbih
+      </a>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">🌙</div>
+
+      <h3>99 Names</h3>
+
+      <p>
+        Explore the beautiful names of Allah.
+      </p>
+
+      <a href="#names" class="card-btn">
+        View Names
+      </a>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">📝</div>
+
+      <h3>Articles</h3>
+
+      <p>
+        Read beneficial Islamic reminders.
+      </p>
+
+      <a href="#articles" class="card-btn">
+        Read Articles
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= QURAN ================= -->
+
+<section id="quran-page" class="page-section quran-page">
+
+  <div class="section-title">
+
+    <p>THE HOLY QUR'AN</p>
+
+    <h2>📖 Qur'an</h2>
+
+  </div>
+
+  <div class="search-box">
+
+    <input
+      type="text"
+      id="surahSearch"
+      placeholder="Search Surah..."
+    >
+
+  </div>
+
+  <div id="surahList" class="surah-list">
+
+    <p class="loading">
+      Loading Qur'an...
+    </p>
+
+  </div>
+
+  <div id="surahReader"></div>
+
+</section>
+
+
+<!-- ================= DAILY REMINDER ================= -->
+
+<section class="reminder">
+
+  <h2>Daily Reminder</h2>
+
+  <div class="reminder-box">
+
+    <p class="arabic">
+      رَبِّ زِدْنِي عِلْمًا
+    </p>
+
+    <p>
+      My Lord, increase me in knowledge.
+    </p>
+
+    <small>
+      Qur'an 20:114
+    </small>
+
+  </div>
+
+</section>
+
+
+<!-- ================= HADITH ================= -->
+
+<section id="hadith-page" class="page-section hadith-page">
+
+  <div class="section-title">
+
+    <p>PROPHETIC TEACHINGS</p>
+
+    <h2>📚 Hadith</h2>
+
+  </div>
+
+  <div class="search-box">
+
+    <input
+      type="text"
+      id="hadithSearch"
+      placeholder="Search Hadith..."
+    >
+
+  </div>
+
+  <div id="hadithList" class="hadith-list">
+
+    <div class="hadith-card">
+      <div class="hadith-number">01</div>
+      <h3>Actions and Intentions</h3>
+      <p>Actions are judged by intentions.</p>
+      <small>Sahih al-Bukhari</small>
+    </div>
+
+    <div class="hadith-card">
+      <div class="hadith-number">02</div>
+      <h3>Learning Qur'an</h3>
+      <p>
+        The best among you are those who learn the Qur'an and teach it.
+      </p>
+      <small>Sahih al-Bukhari</small>
+    </div>
+
+    <div class="hadith-card">
+      <div class="hadith-number">03</div>
+      <h3>Good Speech</h3>
+      <p>
+        Whoever believes in Allah and the Last Day should speak good or remain silent.
+      </p>
+      <small>Sahih al-Bukhari</small>
+    </div>
+
+    <div class="hadith-card">
+      <div class="hadith-number">04</div>
+      <h3>Love for Others</h3>
+      <p>
+        None of you truly believes until he loves for his brother what he loves for himself.
+      </p>
+      <small>Sahih al-Bukhari</small>
+    </div>
+
+    <div class="hadith-card">
+      <div class="hadith-number">05</div>
+      <h3>Hearts and Deeds</h3>
+      <p>
+        Allah looks at your hearts and deeds.
+      </p>
+      <small>Sahih Muslim</small>
+    </div>
+
+    <div class="hadith-card">
+      <div class="hadith-number">06</div>
+      <h3>The Strong Believer</h3>
+      <p>
+        The strong believer is better and more beloved to Allah than the weak believer.
+      </p>
+      <small>Sahih Muslim</small>
+    </div>
+
+    <div class="hadith-card">
+      <div class="hadith-number">07</div>
+      <h3>Mercy</h3>
+      <p>
+        Whoever is not merciful to others will not be shown mercy.
+      </p>
+      <small>Sahih al-Bukhari</small>
+    </div>
+
+    <div class="hadith-card">
+      <div class="hadith-number">08</div>
+      <h3>Kindness</h3>
+      <p>
+        Kindness is a part of faith and good character.
+      </p>
+      <small>Islamic Reminder</small>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= DUA ================= -->
+
+<section id="dua-page" class="page-section dua-page">
+
+  <div class="section-title">
+
+    <p>DAILY SUPPLICATIONS</p>
+
+    <h2>🤲 Addu'o'i</h2>
+
+  </div>
+
+  <div class="dua-list">
+
+    <div class="dua-card">
+
+      <div class="dua-icon">🌅</div>
+
+      <h3>Addu'ar Safe</h3>
+
+      <p class="arabic">
+        أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ
+      </p>
+
+      <p>
+        We have entered the morning and the kingdom belongs to Allah.
+      </p>
+
+      <small>Hisn al-Muslim</small>
+
+    </div>
+
+
+    <div class="dua-card">
+
+      <div class="dua-icon">🌇</div>
+
+      <h3>Addu'ar Yamma</h3>
+
+      <p class="arabic">
+        أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ
+      </p>
+
+      <p>
+        We have entered the evening and the kingdom belongs to Allah.
+      </p>
+
+      <small>Hisn al-Muslim</small>
+
+    </div>
+
+
+    <div class="dua-card">
+
+      <div class="dua-icon">🌙</div>
+
+      <h3>Addu'ar Barci</h3>
+
+      <p class="arabic">
+        بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا
+      </p>
+
+      <p>
+        In Your name, O Allah, I die and I live.
+      </p>
+
+      <small>Sahih al-Bukhari</small>
+
+    </div>
+
+
+    <div class="dua-card">
+
+      <div class="dua-icon">🚗</div>
+
+      <h3>Addu'ar Tafiya</h3>
+
+      <p class="arabic">
+        سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا
+      </p>
+
+      <p>
+        Glory be to Him who has subjected this to us.
+      </p>
+
+      <small>Qur'an 43:13</small>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= TASBIH ================= -->
+
+<section class="section tasbih-section" id="tasbih">
+
+  <div class="section-title">
+
+    <p>DHIKR</p>
+
+    <h2>📿 Tasbih Counter</h2>
+
+  </div>
+
+  <div class="tasbih-card">
+
+    <select id="dhikrSelect">
+
+      <option value="SubhanAllah">
+        SubhanAllah
+      </option>
+
+      <option value="Alhamdulillah">
+        Alhamdulillah
+      </option>
+
+      <option value="Allahu Akbar">
+        Allahu Akbar
+      </option>
+
+    </select>
+
+
+    <h3 id="dhikrName">
+      SubhanAllah
+    </h3>
+
+
+    <div
+      class="tasbih-count"
+      id="tasbihCount">
+      0
+    </div>
+
+
+    <div class="target-buttons">
+
+      <button onclick="setTarget(33)">
+        33
+      </button>
+
+      <button onclick="setTarget(99)">
+        99
+      </button>
+
+    </div>
+
+
+    <p class="target-text">
+
+      Target:
+      <span id="tasbihTarget">
+        33
+      </span>
+
+    </p>
+
+
+    <div class="progress-box">
+
+      <div id="tasbihProgress"></div>
+
+    </div>
+
+
+    <button
+      class="count-btn"
+      onclick="countTasbih()">
+
+      📿 Count
+
+    </button>
+
+
+    <button
+      class="reset-btn"
+      onclick="resetTasbih()">
+
+      Reset
+
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- ================= 99 NAMES ================= -->
+
+<section
+  class="section names-section"
+  id="names">
+
+  <div class="section-title">
+
+    <p>ASMA'UL HUSNA</p>
+
+    <h2>🌙 99 Names of Allah</h2>
+
+  </div>
+
+
+  <div class="names-search">
+
+    <input
+      type="text"
+      id="namesSearch"
+      placeholder="Search a name..."
+    >
+
+  </div>
+
+
+  <div
+    class="names-grid"
+    id="namesGrid">
+
+  </div>
+
+</section>
+
+
+<!-- ================= ARTICLES ================= -->
+
+<section
+  id="articles"
+  class="page-section articles">
+
+  <div class="section-title">
+
+    <p>ISLAMIC KNOWLEDGE</p>
+
+    <h2>📚 Islamic Articles</h2>
+
+  </div>
+
+
+  <div class="article-list">
+
+    <article class="article-card">
+
+      <div class="article-icon">
+        🕌
+      </div>
+
+      <h3>Importance of Salah</h3>
+
+      <p>
+        Salah is one of the important acts of worship in Islam.
+        It helps a Muslim remember Allah and develop discipline.
+      </p>
+
+      <button onclick="readArticle('Salah is a daily act of worship and one of the pillars of Islam.')">
+        Read More
+      </button>
+
+    </article>
+
+
+    <article class="article-card">
+
+      <div class="article-icon">
+        📖
+      </div>
+
+      <h3>Benefits of Reading Qur'an</h3>
+
+      <p>
+        The Qur'an is a source of guidance.
+        Reading and reflecting on it can help us learn and improve our character.
+      </p>
+
+      <button onclick="readArticle('The Qur’an provides guidance, reminders and lessons for believers.')">
+        Read More
+      </button>
+
+    </article>
+
+
+    <article class="article-card">
+
+      <div class="article-icon">
+        🤲
+      </div>
+
+      <h3>Importance of Dua</h3>
+
+      <p>
+        Dua is a way of asking Allah for help, guidance and blessings.
+      </p>
+
+      <button onclick="readArticle('Dua is an important way for a Muslim to turn to Allah.')">
+        Read More
+
+      </button>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section
+  id="about"
+  class="page-section about">
+
+  <div class="section-title">
+
+    <p>ABOUT US</p>
+
+    <h2>☪ About Noorul Huda</h2>
+
+  </div>
+
+
+  <div class="about-box">
+
+    <h3>Noorul Huda</h3>
+
+    <p>
+      Noorul Huda is an Islamic knowledge platform created
+      to provide beneficial Islamic reminders, Qur'an,
+      Hadith, Addu'a and useful Islamic articles.
+    </p>
+
+    <p>
+      Our goal is to make beneficial Islamic knowledge
+      easier to access and learn.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CALENDAR ================= -->
+
+<section
+  id="calendar"
+  class="page-section calendar">
+
+  <div class="section-title">
+
+    <p>ISLAMIC DATE</p>
+
+    <h2>📅 Islamic Calendar</h2>
+
+  </div>
+
+
+  <div class="calendar-box">
+
+    <div class="calendar-icon">
+      📅
+    </div>
+
+    <p>
+      Today's Islamic Date
+    </p>
+
+    <h3 id="hijriDate">
+      Loading...
+    </h3>
+
+    <p>
+      Hijri Calendar
+    </p>
+
+  </div>
+
+</section>
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+  
+<script src="script.js"></script>
+  <footer class="site-footer">
+  <strong>Noorul-Huda</strong>
+    <p>Islamic Knowledge & Guidance
+  <p>Design by<p>
+    <strong>A. LAWAN DESIGNS</strong></p>
+    <p>08065507628<p>
+  <p>© 2026 Noorul Huda</p>
+  </footer>
+
 </body>
 </html>

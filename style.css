@@ -1,881 +1,1000 @@
+/* ===================================
+   NOORUL HUDA
+   MAIN STYLESHEET
+=================================== */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #f5f8f4;
-    color: #173b2c;
+  font-family: Arial, sans-serif;
+  background: #f7faf8;
+  color: #17201c;
+  line-height: 1.6;
 }
 
-header {
-    background: #063b2b;
-    color: white;
-    padding: 18px 7%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+
+/* ================= HEADER ================= */
+
+.header {
+  width: 100%;
+  background: #063b2b;
+  min-height: 70px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 3px 15px rgba(0,0,0,.15);
 }
 
 .logo {
-    font-size: 25px;
-    font-weight: bold;
-    color: #d8bd55;
+  color: white;
+  font-size: 23px;
+  font-weight: bold;
 }
 
-nav {
-    display: flex;
-    gap: 25px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #d8bd55;
+.logo span {
+  color: #d9b45b;
 }
 
 .menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 28px;
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
 }
 
+#menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+#menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  transition: .3s;
+}
+
+#menu a:hover {
+  color: #d9b45b;
+}
+
+
+/* ================= HERO ================= */
+
 .hero {
-    min-height: 570px;
-    padding: 80px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: #083f2e;
-    color: white;
+  min-height: 570px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  background:
+    linear-gradient(rgba(6,59,43,.92), rgba(6,59,43,.92)),
+    radial-gradient(circle at center, #12634c, #063b2b);
+  color: white;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.big-arabic {
+  font-size: 34px;
+  margin-bottom: 25px;
 }
 
 .hero h1 {
-    font-size: 50px;
-    margin: 15px 0;
+  font-size: 48px;
+  margin-bottom: 15px;
 }
 
 .hero h1 span {
-    color: #d8bd55;
+  color: #d9b45b;
 }
 
-.hero p:not(.arabic) {
-    font-size: 18px;
+.hero-text {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #e9f0ec;
 }
 
-.arabic {
-    direction: rtl;
-    font-size: 35px;
-    color: #d8bd55;
-    margin: 15px 0;
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .btn {
-    display: inline-block;
-    margin: 30px 5px 0;
-    padding: 13px 25px;
-    border-radius: 30px;
-    background: #d8bd55;
-    color: #063b2b;
-    text-decoration: none;
-    font-weight: bold;
+  display: inline-block;
+  padding: 13px 23px;
+  border-radius: 8px;
+  background: #d9b45b;
+  color: #063b2b;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .btn.second {
-    background: transparent;
-    color: white;
-    border: 2px solid #d8bd55;
+  background: white;
 }
+
+
+/* ================= ARABIC ================= */
+
+.arabic {
+  font-family: "Times New Roman", serif;
+  direction: rtl;
+  font-size: 25px;
+}
+
+
+/* ================= VERSE ================= */
 
 .verse {
-    text-align: center;
-    background: white;
-    padding: 45px 20px;
-    box-shadow: 0 3px 15px #00000012;
+  text-align: center;
+  padding: 50px 20px;
+  background: white;
+  box-shadow: 0 3px 15px rgba(0,0,0,.05);
 }
 
-.verse h3 {
-    color: #9a8120;
-    letter-spacing: 2px;
+.verse-title {
+  color: #063b2b;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
 }
 
 .verse .arabic {
-    color: #063b2b;
+  font-size: 32px;
+  margin-bottom: 12px;
 }
 
-.resources {
-    padding: 70px 7%;
-    text-align: center;
+
+/* ================= SECTIONS ================= */
+
+.page-section,
+.resources,
+.reminder {
+  padding: 70px 6%;
 }
 
-.resources h2,
-.dua h2,
-.about h2 {
-    font-size: 34px;
-    margin-bottom: 40px;
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
 }
+
+.section-title p {
+  color: #d09f35;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.section-title h2 {
+  color: #063b2b;
+  font-size: 34px;
+  margin-top: 5px;
+}
+
+
+/* ================= RESOURCE CARDS ================= */
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+  max-width: 1150px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
 }
 
 .card {
-    background: white;
-    padding: 30px 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px #00000012;
+  background: white;
+  padding: 30px 20px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid #e4ebe7;
+  box-shadow: 0 7px 20px rgba(0,0,0,.06);
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .icon {
-    font-size: 45px;
-    margin-bottom: 15px;
+  font-size: 42px;
+  margin-bottom: 12px;
 }
 
 .card h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
+  color: #063b2b;
+  margin-bottom: 8px;
 }
 
 .card p {
-    color: #666;
-    margin-bottom: 20px;
+  color: #666;
+  margin-bottom: 20px;
 }
 
-.card button {
-    border: none;
-    background: #063b2b;
-    color: white;
-    padding: 11px 20px;
-    border-radius: 25px;
+.card-btn {
+  display: inline-block;
+  padding: 10px 17px;
+  background: #063b2b;
+  color: white;
+  text-decoration: none;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
-.dua {
-    padding: 70px 7%;
-    text-align: center;
-    background: #e8f0e8;
+
+/* ================= SEARCH ================= */
+
+.search-box {
+  max-width: 650px;
+  margin: 0 auto 35px;
 }
 
-.dua-box {
-    max-width: 650px;
-    margin: auto;
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
+.search-box input {
+  width: 100%;
+  padding: 15px 18px;
+  border: 1px solid #ccd8d2;
+  border-radius: 12px;
+  outline: none;
+  font-size: 16px;
+  background: white;
 }
 
-.dua-box .arabic {
-    color: #063b2b;
+.search-box input:focus {
+  border-color: #063b2b;
+  box-shadow: 0 0 0 3px rgba(6,59,43,.08);
 }
 
-.about {
-    padding: 70px 10%;
-    text-align: center;
-}
 
-.about p {
-    max-width: 700px;
-    margin: auto;
-    color: #555;
-}
+/* ================= QURAN ================= */
 
-footer {
-    background: #04271d;
-    color: white;
-    text-align: center;
-    padding: 45px 20px;
-}
-
-footer h2 {
-    color: #d8bd55;
-    margin-bottom: 10px;
-}
-
-@media (max-width: 850px) {
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 650px) {
-
-    .menu-btn {
-        display: block;
-    }
-
-    nav {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: #063b2b;
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
-
-    nav.active {
-        display: flex;
-    }
-
-    .hero h1 {
-        font-size: 35px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .arabic {
-        font-size: 27px;
-    }
-}
-.calendar {
-    padding: 70px 7%;
-    text-align: center;
-    background: white;
-}
-
-.calendar h2 {
-    font-size: 34px;
-    margin-bottom: 30px;
-}
-
-.calendar-box {
-    max-width: 600px;
-    margin: auto;
-    padding: 35px;
-    background: #f5f8f4;
-    border-radius: 20px;
-    box-shadow: 0 5px 20px #00000012;
-}
-
-.calendar-box h3 {
-    color: #063b2b;
-    font-size: 28px;
-    margin: 15px 0;
-}
 .quran-page {
-    padding: 70px 7%;
-    background: #f5f8f4;
-    text-align: center;
-}
-
-.quran-search {
-    max-width: 600px;
-    margin: 0 auto 35px;
-}
-
-.quran-search input {
-    width: 100%;
-    padding: 15px 20px;
-    border: 2px solid #d8bd55;
-    border-radius: 30px;
-    outline: none;
-    font-size: 16px;
+  background: #f7faf8;
 }
 
 .surah-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    text-align: left;
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
 
 .surah-card {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px #00000012;
-    cursor: pointer;
-    transition: .3s;
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #e0e8e4;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: .3s;
 }
 
 .surah-card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-3px);
+  border-color: #063b2b;
 }
 
 .surah-number {
-    display: inline-flex;
-    width: 40px;
-    height: 40px;
-    align-items: center;
-    justify-content: center;
-    background: #063b2b;
-    color: white;
-    border-radius: 50%;
-    margin-right: 10px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #063b2b;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
 }
 
 .surah-name {
-    font-weight: bold;
-    font-size: 18px;
+  flex: 1;
+  font-weight: bold;
+  color: #063b2b;
+}
+
+.surah-name small {
+  display: block;
+  color: #777;
+  font-weight: normal;
 }
 
 .surah-arabic {
-    float: right;
-    direction: rtl;
-    font-size: 22px;
-    color: #063b2b;
+  font-family: "Times New Roman", serif;
+  font-size: 22px;
+  direction: rtl;
 }
 
-@media (max-width: 700px) {
-    .surah-list {
-        grid-template-columns: 1fr;
-    }
-}
-.loading {
-    text-align: center;
-    padding: 30px;
-    font-size: 18px;
-}
 
-.error {
-    text-align: center;
-    padding: 30px;
-    color: #b00020;
-}
-
-.surah-name {
-    display: inline-block;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.surah-name small {
-    display: block;
-    color: #777;
-    font-size: 12px;
-    font-weight: normal;
-}
+/* Quran Reader */
 
 .reader {
-    max-width: 900px;
-    margin: auto;
+  max-width: 900px;
+  margin: 30px auto;
 }
 
 .back-btn {
-    border: none;
-    background: #063b2b;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    margin-bottom: 30px;
+  border: none;
+  background: #063b2b;
+  color: white;
+  padding: 11px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 25px;
 }
 
 .surah-header {
-    text-align: center;
-    background: white;
-    padding: 35px 20px;
-    border-radius: 20px;
-    margin-bottom: 25px;
+  text-align: center;
+  background: #063b2b;
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 25px;
 }
 
 .reader-arabic {
-    direction: rtl;
-    font-size: 38px;
-    color: #063b2b;
-    margin-bottom: 10px;
-}
-
-.ayah-container {
-    background: white;
-    border-radius: 20px;
-    padding: 20px;
+  font-size: 32px;
+  direction: rtl;
+  font-family: "Times New Roman", serif;
 }
 
 .ayah {
-    padding: 30px 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-.ayah:last-child {
-    border-bottom: none;
-}
-
-.ayah-number {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: #063b2b;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
-}
-
-.ayah-arabic {
-    direction: rtl;
-    text-align: right;
-    font-size: 30px;
-    line-height: 2;
-    color: #063b2b;
-    margin-bottom: 20px;
-}
-
-.ayah-translation {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.8;
-}
-
-@media (max-width: 650px) {
-
-    .reader-arabic {
-        font-size: 30px;
-    }
-
-    .ayah-arabic {
-        font-size: 25px;
-        line-height: 2;
-    }
-
-    .ayah-translation {
-        font-size: 15px;
-    }
-}
-.loading {
-    text-align: center;
-    padding: 30px;
-    font-size: 18px;
-}
-
-.error {
-    text-align: center;
-    padding: 30px;
-    color: #b00020;
-}
-
-.surah-name {
-    display: inline-block;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.surah-name small {
-    display: block;
-    color: #777;
-    font-size: 12px;
-    font-weight: normal;
-}
-
-.reader {
-    max-width: 900px;
-    margin: auto;
-}
-
-.back-btn {
-    border: none;
-    background: #063b2b;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    margin-bottom: 30px;
-}
-
-.surah-header {
-    text-align: center;
-    background: white;
-    padding: 35px 20px;
-    border-radius: 20px;
-    margin-bottom: 25px;
-}
-
-.reader-arabic {
-    direction: rtl;
-    font-size: 38px;
-    color: #063b2b;
-    margin-bottom: 10px;
-}
-
-.ayah-container {
-    background: white;
-    border-radius: 20px;
-    padding: 20px;
-}
-
-.ayah {
-    padding: 30px 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-.ayah:last-child {
-    border-bottom: none;
+  background: white;
+  padding: 25px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: 1px solid #e0e8e4;
 }
 
 .ayah-number {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: #063b2b;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #063b2b;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
 }
 
 .ayah-arabic {
-    direction: rtl;
-    text-align: right;
-    font-size: 30px;
-    line-height: 2;
-    color: #063b2b;
-    margin-bottom: 20px;
+  direction: rtl;
+  text-align: right;
+  font-family: "Times New Roman", serif;
+  font-size: 28px;
+  margin: 18px 0;
 }
 
 .ayah-translation {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.8;
+  color: #555;
 }
 
-@media (max-width: 650px) {
 
-    .reader-arabic {
-        font-size: 30px;
-    }
+/* ================= REMINDER ================= */
 
-    .ayah-arabic {
-        font-size: 25px;
-        line-height: 2;
-    }
-
-    .ayah-translation {
-        font-size: 15px;
-    }
+.reminder {
+  background: #063b2b;
+  color: white;
+  text-align: center;
 }
+
+.reminder h2 {
+  margin-bottom: 25px;
+}
+
+.reminder-box {
+  max-width: 650px;
+  margin: auto;
+  background: rgba(255,255,255,.08);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.reminder-box .arabic {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+
+/* ================= HADITH ================= */
+
 .hadith-page {
-    padding: 70px 7%;
-    background: #f5f8f4;
-}
-
-.hadith-search {
-    max-width: 600px;
-    margin: 0 auto 35px;
-}
-
-.hadith-search input {
-    width: 100%;
-    padding: 15px 20px;
-    border: 2px solid #d8bd55;
-    border-radius: 30px;
-    outline: none;
-    font-size: 16px;
+  background: white;
 }
 
 .hadith-list {
-    max-width: 900px;
-    margin: auto;
-    display: grid;
-    gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
 }
 
 .hadith-card {
-    background: white;
-    padding: 30px;
-    border-radius: 18px;
-    box-shadow: 0 5px 20px #00000012;
+  position: relative;
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid #dfe8e3;
+  box-shadow: 0 8px 25px rgba(0,0,0,.07);
+  overflow: hidden;
+  transition: .3s;
+}
+
+.hadith-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.10);
+}
+
+.hadith-number {
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  color: #d0a343;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .hadith-card h3 {
-    color: #063b2b;
-    margin-bottom: 12px;
+  color: #063b2b;
+  font-size: 20px;
+  margin-bottom: 12px;
+  padding-right: 35px;
 }
 
 .hadith-card p {
-    font-size: 18px;
-    margin-bottom: 12px;
+  color: #444;
+  font-size: 16px;
+  margin-bottom: 18px;
 }
 
 .hadith-card small {
-    color: #927c22;
-    font-weight: bold;
+  color: #777;
+  font-weight: bold;
 }
+
+
+/* ================= DUA ================= */
+
 .dua-page {
-    padding: 70px 7%;
-    background: #e8f0e8;
-    text-align: center;
+  background: #f7faf8;
 }
 
-.dua-categories {
-    max-width: 900px;
-    margin: 0 auto 35px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+.dua-list {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
 }
 
-.dua-categories button {
-    padding: 16px;
-    border: none;
-    border-radius: 12px;
-    background: #063b2b;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+.dua-card {
+  background: white;
+  padding: 30px;
+  border-radius: 17px;
+  border: 1px solid #e1e9e5;
+  box-shadow: 0 7px 20px rgba(0,0,0,.06);
 }
 
-.dua-categories button:hover {
-    background: #176044;
+.dua-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
-.dua-display {
-    max-width: 750px;
-    margin: auto;
-    background: white;
-    padding: 40px 25px;
-    border-radius: 20px;
-    box-shadow: 0 5px 20px #00000012;
+.dua-card h3 {
+  color: #063b2b;
+  margin-bottom: 15px;
 }
 
-.dua-display .arabic {
-    font-size: 35px;
-    color: #063b2b;
-    margin-bottom: 20px;
+.dua-card .arabic {
+  font-size: 27px;
+  margin-bottom: 15px;
 }
 
-.dua-display p:not(.arabic) {
-    font-size: 17px;
-    color: #555;
+.dua-card small {
+  color: #777;
 }
 
-.dua-display small {
-    display: block;
-    margin-top: 15px;
-    color: #927c22;
-}
 
-@media (max-width: 650px) {
-
-    .dua-categories {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .dua-display .arabic {
-        font-size: 27px;
-    }
-
-}
-.dua-categories {
-    max-width: 700px;
-    margin: 0 auto 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-.dua-categories button {
-    padding: 16px 10px;
-    border: none;
-    border-radius: 12px;
-    background: #063b2b;
-    color: white;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-.dua-categories button:hover {
-    background: #176044;
-}
-.dua-categories {
-    max-width: 700px;
-    margin: 0 auto 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-.dua-categories button {
-    padding: 16px 10px;
-    border: none;
-    border-radius: 12px;
-    background: #063b2b;
-    color: white;
-    font-size: 15px;
-    cursor: pointer;
-}
-/* =========================
-   DUA BUTTONS
-========================= */
-
-.dua-page input {
-    display: none;
-}
-
-.dua-categories {
-    max-width: 700px;
-    margin: 0 auto 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-.dua-categories label {
-    display: block;
-    padding: 16px 10px;
-    background: #063b2b;
-    color: white;
-    border-radius: 12px;
-    text-align: center;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.dua-categories label:hover {
-    background: #176044;
-}
-
-.dua-display {
-    max-width: 750px;
-    margin: auto;
-    background: white;
-    padding: 40px 25px;
-    border-radius: 20px;
-    box-shadow: 0 5px 20px #00000012;
-}
-
-.dua-item {
-    display: none;
-    text-align: center;
-}
-
-.dua-item .arabic {
-    font-size: 35px;
-    color: #063b2b;
-    margin-bottom: 20px;
-}
-
-.dua-item p:not(.arabic) {
-    font-size: 17px;
-    color: #555;
-}
-
-.dua-item small {
-    display: block;
-    margin-top: 15px;
-    color: #927c22;
-}
-
-/* SHOW SELECTED DUA */
-
-#morning:checked ~ .dua-display .morning-dua {
-    display: block;
-}
-
-#evening:checked ~ .dua-display .evening-dua {
-    display: block;
-}
-
-#sleep:checked ~ .dua-display .sleep-dua {
-    display: block;
-}
-
-#travel:checked ~ .dua-display .travel-dua {
-    display: block;
-}
-
-#knowledge:checked ~ .dua-display .knowledge-dua {
-    display: block;
-}
-
-#forgiveness:checked ~ .dua-display .forgiveness-dua {
-    display: block;
-}
-
-@media (max-width: 650px) {
-
-    .dua-categories {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
-
-    .dua-categories label {
-        font-size: 13px;
-        padding: 14px 5px;
-    }
-
-    .dua-item .arabic {
-        font-size: 27px;
-    }
-}
-/* =========================
-   ISLAMIC ARTICLES
-========================= */
-
-.articles {
-    padding: 70px 7%;
-    background: white;
-    text-align: center;
-}
+/* ================= ARTICLES ================= */
 
 .article-list {
-    max-width: 1000px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
 }
 
 .article-card {
-    background: #f5f8f4;
-    padding: 30px 20px;
-    border-radius: 18px;
-    box-shadow: 0 5px 20px #00000012;
+  background: white;
+  padding: 30px;
+  border-radius: 17px;
+  border: 1px solid #e1e9e5;
+  box-shadow: 0 7px 20px rgba(0,0,0,.06);
 }
 
 .article-icon {
-    font-size: 45px;
-    margin-bottom: 15px;
+  font-size: 38px;
+  margin-bottom: 12px;
 }
 
 .article-card h3 {
-    color: #063b2b;
-    margin-bottom: 12px;
+  color: #063b2b;
+  margin-bottom: 12px;
 }
 
 .article-card p {
-    color: #555;
-    line-height: 1.7;
-    margin-bottom: 20px;
+  color: #555;
+  margin-bottom: 20px;
 }
 
 .article-card button {
-    border: none;
-    padding: 12px 22px;
-    border-radius: 25px;
+  border: none;
+  background: #063b2b;
+  color: white;
+  padding: 10px 17px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+  background: white;
+  text-align: center;
+}
+
+.about-box {
+  max-width: 800px;
+  margin: auto;
+  background: #f7faf8;
+  padding: 35px;
+  border-radius: 17px;
+  border: 1px solid #e1e9e5;
+}
+
+.about-box h3 {
+  color: #063b2b;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+
+/* ================= CALENDAR ================= */
+
+.calendar {
+  text-align: center;
+  background: #f7faf8;
+}
+
+.calendar-box {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  border: 1px solid #e1e9e5;
+  box-shadow: 0 7px 20px rgba(0,0,0,.06);
+}
+
+.calendar-icon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.calendar-box h3 {
+  color: #063b2b;
+  font-size: 25px;
+  margin: 10px 0;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+  background: #063b2b;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.footer-logo {
+  color: #d9b45b;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.footer-line {
+  width: 80px;
+  height: 2px;
+  background: #d9b45b;
+  margin: 20px auto;
+}
+
+
+/* ================= LOADING ================= */
+
+.loading {
+  text-align: center;
+  color: #777;
+  padding: 30px;
+}
+
+.error {
+  text-align: center;
+  color: #b00020;
+  padding: 30px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+  .header {
+    padding: 0 20px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  #menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
     background: #063b2b;
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+  }
+
+  #menu.active {
+    display: flex;
+  }
+
+  #menu a {
+    padding: 15px 25px;
+    border-top: 1px solid rgba(255,255,255,.1);
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .big-arabic {
+    font-size: 27px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .surah-list {
+    grid-template-columns: 1fr;
+  }
+
+  .hadith-list {
+    grid-template-columns: 1fr;
+  }
+
+  .dua-list {
+    grid-template-columns: 1fr;
+  }
+
+  .article-list {
+    grid-template-columns: 1fr;
+  }
+
 }
 
-.article-card button:hover {
-    background: #176044;
+
+@media (max-width: 500px) {
+
+  .logo {
+    font-size: 19px;
+  }
+
+  .hero {
+    min-height: 500px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero-text {
+    font-size: 17px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .page-section,
+  .resources,
+  .reminder {
+    padding: 50px 15px;
+  }
+
+  .section-title h2 {
+    font-size: 28px;
+  }
+
+  .hadith-card,
+  .dua-card,
+  .article-card {
+    padding: 22px;
+  }
+
+}
+/* TASBIH COUNTER */
+
+.tasbih-section {
+  padding: 70px 20px;
+  background: #f4f8f6;
 }
 
-@media (max-width: 700px) {
-    .article-list {
-        grid-template-columns: 1fr;
-    }
+.tasbih-card {
+  max-width: 450px;
+  margin: auto;
+  background: white;
+  padding: 35px 25px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.tasbih-card select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #dfe8e3;
+  border-radius: 12px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.tasbih-card h3 {
+  color: #063b2b;
+  margin-bottom: 15px;
+}
+
+.tasbih-count {
+  font-size: 70px;
+  font-weight: bold;
+  color: #063b2b;
+  margin: 20px 0;
+}
+
+.count-btn,
+.reset-btn {
+  border: none;
+  padding: 14px 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.count-btn {
+  background: #063b2b;
+  color: white;
+}
+
+.reset-btn {
+  background: #e8eeee;
+  color: #063b2b;
+}
+
+.count-btn:active {
+  transform: scale(.96);
+}
+.target-buttons {
+  margin: 15px 0;
+}
+
+.target-buttons button {
+  padding: 10px 22px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  background: #e8eeee;
+  color: #063b2b;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.target-text {
+  color: #063b2b;
+  font-weight: bold;
+}
+
+.progress-box {
+  width: 100%;
+  height: 10px;
+  background: #e5ebe8;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 15px 0 20px;
+}
+
+#tasbihProgress {
+  width: 0%;
+  height: 100%;
+  background: #063b2b;
+  transition: width .3s ease;
+}
+/* 99 NAMES OF ALLAH */
+
+.names-section {
+  background: #f4f8f6;
+}
+
+.names-search {
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.names-search input {
+  width: 100%;
+  padding: 15px 18px;
+  border: 1px solid #dfe8e3;
+  border-radius: 14px;
+  font-size: 16px;
+  outline: none;
+}
+
+.names-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.name-card {
+  background: white;
+  padding: 25px 20px;
+  border-radius: 18px;
+  text-align: center;
+  border: 1px solid #dfe8e3;
+  box-shadow: 0 8px 25px rgba(0,0,0,.06);
+  transition: .3s;
+}
+
+.name-card:hover {
+  transform: translateY(-5px);
+}
+
+.name-number {
+  color: #777;
+  font-size: 14px;
+}
+
+.name-arabic {
+  font-size: 32px;
+  color: #063b2b;
+  margin: 12px 0;
+  direction: rtl;
+}
+
+.name-english {
+  font-size: 18px;
+  font-weight: bold;
+  color: #063b2b;
+}
+
+.name-meaning {
+  margin-top: 8px;
+  color: #666;
+}
+
+@media (max-width: 800px) {
+  .names-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .names-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ================= BOTTOM NAVIGATION ================= */
+
+.bottom-nav {
+  position: relative;
+  width: 100%;
+  height: 65px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #dfe8e3;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  padding: 5px 2px;
+  z-index: 100;
+}
+
+.bottom-nav a {
+  flex: 1;
+  text-decoration: none;
+  color: #777;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.bottom-nav a span {
+  font-size: 21px;
+}
+
+.bottom-nav a small {
+  font-size: 9px;
+}
+.site-footer {
+  text-align: center;
+  padding: 25px 15px;
+  margin-top: 30px;
+  background: #063b2b;
+  color: white;
+}
+
+.site-footer p {
+  margin: 5px 0;
+  font-size: 13px;
+}
+
+.site-footer strong {
+  font-size: 14px;
+}
+.site-footer {
+  text-align: center;
+  padding: 25px 15px;
+  margin-top: 30px;
+  background: #063b2b;
+  color: white;
+}
+
+.site-footer p {
+  margin: 6px 0;
+  font-size: 12px;
+}
+
+.site-footer strong {
+  font-size: 15px;
 }
